@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="/index.css">
+<link rel="stylesheet" href="/header.css">
+<title>TOPページ</title>
+<style>
+h1.indexH1 {
+	color: #222222;
+	font-size: 30px;
+	margin-bottom: 3px;
+	margin-top: 3px;
+	margin-left: 3px;
+	padding: 0;
+}
+
+tr {
+	font-size: 25px;
+}
+
+th.weekOfDay {
+	background: #DDDDDD;
+	text-align: left;
+}
+
+table {
+	margin-left: 5px;
+	width: 70%;
+}
+
+td.expenditure {
+	color: #cc0000;
+	font-size: 20px;
+	padding: 5px;
+	width: 10%;
+	text-align: right;
+}
+
+td.income {
+	color: #0000cc;
+	text-align: right;
+	font-size: 20px;
+	padding: 5px;
+	width: 10%;
+	text-align: right;
+}
+
+button {
+	margin: 10px 5px;
+}
+
+p {
+	font-size: 20px;
+}
+</style>
+</head>
+<body>
+	<header th:include="header :: header"> </header>
+
+	<h1 class="indexH1" th:text="${month}"></h1>
+
+	<table frame="box">
+		<tr th:object="${calendar.get(0)}">
+			<th class="weekOfDay" th:text="*{day1}"></th>
+			<th class="weekOfDay" th:text="*{day2}"></th>
+			<th class="weekOfDay" th:text="*{day3}"></th>
+			<th class="weekOfDay" th:text="*{day4}"></th>
+			<th class="weekOfDay" th:text="*{day5}"></th>
+			<th class="weekOfDay" th:text="*{day6}"></th>
+			<th class="weekOfDay" th:text="*{day7}"></th>
+		</tr>
+
+		<tr th:object="${calendar.get(0)}">
+			<td class="expenditure" th:text="*{expenditure1}"></td>
+			<td class="expenditure" th:text="*{expenditure2}"></td>
+			<td class="expenditure" th:text="*{expenditure3}"></td>
+			<td class="expenditure" th:text="*{expenditure4}"></td>
+			<td class="expenditure" th:text="*{expenditure5}"></td>
+			<td class="expenditure" th:text="*{expenditure6}"></td>
+			<td class="expenditure" th:text="*{expenditure7}"></td>
+		</tr>
+
+		<tr th:object="${calendar.get(0)}">
+			<td class="income" th:text="*{income1}"></td>
+			<td class="income" th:text="*{income2}"></td>
+			<td class="income" th:text="*{income3}"></td>
+			<td class="income" th:text="*{income4}"></td>
+			<td class="income" th:text="*{income5}"></td>
+			<td class="income" th:text="*{income6}"></td>
+			<td class="income" th:text="*{income7}"></td>
+		</tr>
+
+		<tr th:object="${calendar.get(1)}">
+			<th class="weekOfDay" th:text="*{day1}"></th>
+			<th class="weekOfDay" th:text="*{day2}"></th>
+			<th class="weekOfDay" th:text="*{day3}"></th>
+			<th class="weekOfDay" th:text="*{day4}"></th>
+			<th class="weekOfDay" th:text="*{day5}"></th>
+			<th class="weekOfDay" th:text="*{day6}"></th>
+			<th class="weekOfDay" th:text="*{day7}"></th>
+		</tr>
+
+		<tr th:object="${calendar.get(1)}">
+			<td class="expenditure" th:text="*{expenditure1}"></td>
+			<td class="expenditure" th:text="*{expenditure2}"></td>
+			<td class="expenditure" th:text="*{expenditure3}"></td>
+			<td class="expenditure" th:text="*{expenditure4}"></td>
+			<td class="expenditure" th:text="*{expenditure5}"></td>
+			<td class="expenditure" th:text="*{expenditure6}"></td>
+			<td class="expenditure" th:text="*{expenditure7}"></td>
+		</tr>
+
+		<tr th:object="${calendar.get(1)}">
+			<td class="income" th:text="*{income1}"></td>
+			<td class="income" th:text="*{income2}"></td>
+			<td class="income" th:text="*{income3}"></td>
+			<td class="income" th:text="*{income4}"></td>
+			<td class="income" th:text="*{income5}"></td>
+			<td class="income" th:text="*{income6}"></td>
+			<td class="income" th:text="*{income7}"></td>
+		</tr>
+
+		<tr th:object="${calendar.get(2)}">
+			<th class="weekOfDay" th:text="*{day1}"></th>
+			<th class="weekOfDay" th:text="*{day2}"></th>
+			<th class="weekOfDay" th:text="*{day3}"></th>
+			<th class="weekOfDay" th:text="*{day4}"></th>
+			<th class="weekOfDay" th:text="*{day5}"></th>
+			<th class="weekOfDay" th:text="*{day6}"></th>
+			<th class="weekOfDay" th:text="*{day7}"></th>
+		</tr>
+
+		<tr th:object="${calendar.get(2)}">
+			<td class="expenditure" th:text="*{expenditure1}"></td>
+			<td class="expenditure" th:text="*{expenditure2}"></td>
+			<td class="expenditure" th:text="*{expenditure3}"></td>
+			<td class="expenditure" th:text="*{expenditure4}"></td>
+			<td class="expenditure" th:text="*{expenditure5}"></td>
+			<td class="expenditure" th:text="*{expenditure6}"></td>
+			<td class="expenditure" th:text="*{expenditure7}"></td>
+		</tr>
+
+		<tr th:object="${calendar.get(2)}">
+			<td class="income" th:text="*{income1}"></td>
+			<td class="income" th:text="*{income2}"></td>
+			<td class="income" th:text="*{income3}"></td>
+			<td class="income" th:text="*{income4}"></td>
+			<td class="income" th:text="*{income5}"></td>
+			<td class="income" th:text="*{income6}"></td>
+			<td class="income" th:text="*{income7}"></td>
+		</tr>
+
+		<tr th:object="${calendar.get(3)}">
+			<th class="weekOfDay" th:text="*{day1}"></th>
+			<th class="weekOfDay" th:text="*{day2}"></th>
+			<th class="weekOfDay" th:text="*{day3}"></th>
+			<th class="weekOfDay" th:text="*{day4}"></th>
+			<th class="weekOfDay" th:text="*{day5}"></th>
+			<th class="weekOfDay" th:text="*{day6}"></th>
+			<th class="weekOfDay" th:text="*{day7}"></th>
+		</tr>
+
+		<tr th:object="${calendar.get(3)}">
+			<td class="expenditure" th:text="*{expenditure1}"></td>
+			<td class="expenditure" th:text="*{expenditure2}"></td>
+			<td class="expenditure" th:text="*{expenditure3}"></td>
+			<td class="expenditure" th:text="*{expenditure4}"></td>
+			<td class="expenditure" th:text="*{expenditure5}"></td>
+			<td class="expenditure" th:text="*{expenditure6}"></td>
+			<td class="expenditure" th:text="*{expenditure7}"></td>
+		</tr>
+
+		<tr th:object="${calendar.get(3)}">
+			<td class="income" th:text="*{income1}"></td>
+			<td class="income" th:text="*{income2}"></td>
+			<td class="income" th:text="*{income3}"></td>
+			<td class="income" th:text="*{income4}"></td>
+			<td class="income" th:text="*{income5}"></td>
+			<td class="income" th:text="*{income6}"></td>
+			<td class="income" th:text="*{income7}"></td>
+		</tr>
+
+		<tr th:object="${calendar.get(4)}">
+			<th class="weekOfDay" th:text="*{day1}"></th>
+			<th class="weekOfDay" th:text="*{day2}"></th>
+			<th class="weekOfDay" th:text="*{day3}"></th>
+			<th class="weekOfDay" th:text="*{day4}"></th>
+			<th class="weekOfDay" th:text="*{day5}"></th>
+			<th class="weekOfDay" th:text="*{day6}"></th>
+			<th class="weekOfDay" th:text="*{day7}"></th>
+		</tr>
+
+		<tr th:object="${calendar.get(4)}">
+			<td class="expenditure" th:text="*{expenditure1}"></td>
+			<td class="expenditure" th:text="*{expenditure2}"></td>
+			<td class="expenditure" th:text="*{expenditure3}"></td>
+			<td class="expenditure" th:text="*{expenditure4}"></td>
+			<td class="expenditure" th:text="*{expenditure5}"></td>
+			<td class="expenditure" th:text="*{expenditure6}"></td>
+			<td class="expenditure" th:text="*{expenditure7}"></td>
+		</tr>
+
+		<tr th:object="${calendar.get(4)}">
+			<td class="income" th:text="*{income1}"></td>
+			<td class="income" th:text="*{income2}"></td>
+			<td class="income" th:text="*{income3}"></td>
+			<td class="income" th:text="*{income4}"></td>
+			<td class="income" th:text="*{income5}"></td>
+			<td class="income" th:text="*{income6}"></td>
+			<td class="income" th:text="*{income7}"></td>
+		</tr>
+
+	</table>
+	<div>
+		<p th:inline="text">
+			年間出費[[${yearExpenditure}]]円<br> 年間収入[[${yearIncome}]]円<br>最高出費[[${maxExpenditure}]]円<br>最高収入[[${maxIncome}]]円<br>
+		</p>
+	</div>
+	<button class="b" onclick="location.href='/inputEx'">出費の入力</button>
+	<button class="c" onclick="location.href='/inputIn'">収入の入力</button>
+	<form method="get" action="/">
+	<button class="d" type="submit" name="day" value="0">前の月へ</button>
+	<button class="e" type="submit" name="day" value="1">次の月へ</button>
+	</form>
+
+
+
+	<footer> </footer>
+
+</body>
+</html>
