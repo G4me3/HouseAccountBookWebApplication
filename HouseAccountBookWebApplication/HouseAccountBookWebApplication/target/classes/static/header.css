@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+header {
+	background: url(/back.png);
+	background-size: cover;
+}
+
+h1.headerH1 {
+	color: white;
+	font-size: 250%;
+	text-align: left;
+	margin-left: 20px;
+}

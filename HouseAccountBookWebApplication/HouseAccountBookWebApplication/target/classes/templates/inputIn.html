@@ -4,7 +4,7 @@
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" href="/header.css">
 <style>
-h1.inputExH1 {
+h1.inputInH1 {
 	color: #222222;
 	font-size: 30px;
 	margin-bottom: 3px;
@@ -12,6 +12,7 @@ h1.inputExH1 {
 	margin-left: 3px;
 	padding: 0;
 }
+
 button {
 	margin: 5px;
 }
@@ -24,9 +25,9 @@ input {
 </head>
 <body>
 	<header th:include="header :: header"> </header>
-	<h1 class="inputExH1">入力フォーム</h1>
-	<form method="post" action="/inputEx">
-		<select name="day" required>
+	<h1 class="inputInH1">入力フォーム</h1>
+	<form method="post" action="/inputIn">
+	<select name="day" required>
 	<option>- 日にちを選択 -</option>
     <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
     <option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
@@ -37,8 +38,8 @@ input {
 	<option value="31">31</option>
 	</select><br>
 
-	出費を入力してください<br>
-		<input type="text" name="expenditure" required /><br>
+		収入を入力してください<br>
+		<input type="text" name="income" required /><br>
 		<button onclick="history.back()">戻る</button>
 		<input type="submit" value="送信" />
 	</form>
